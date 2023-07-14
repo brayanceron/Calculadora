@@ -2,6 +2,7 @@ function inputConverter(num) {
     let number = resultConv.value;
     resultConv.value = number + num;
 }
+
 let resultConv = document.getElementById("resultConversor");
 
 
@@ -33,5 +34,15 @@ function KgtoGr(value) {
 //Gr to Kg
 function GrtoKg(value) {
     r = (value / 1000).toFixed(4);
+    return r;
+}
+//Mt to Cm
+function MttoCm(value) {
+    r = (100 * value).toFixed(1);
+    return r;
+}
+//Cm to Mt
+function CmtoMt(value) {
+    r = (value / 100).toFixed(4);
     return r;
 }
