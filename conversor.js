@@ -15,3 +15,14 @@ function CttoFah(value) {
     r = ((value * 9 / 5) + 32).toFixed(1)
     return r;
 }
+//Bar to Pas
+function BartoPas(value) {
+    r = (100000 * value).toFixed(1);
+    return r;
+}
+//Pas to bar
+function Pastobar(value) {
+    r = (value / 100000).toFixed(7);
+    return r;
+}
+
