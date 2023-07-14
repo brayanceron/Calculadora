@@ -1,0 +1,17 @@
+function inputConverter(num) {
+    let number = resultConv.value;
+    resultConv.value = number + num;
+}
+let resultConv = document.getElementById("resultConversor");
+
+
+//Fah to Ct
+function FahtoCt(value) {
+    r = (((value - 32) / 9) * 5).toFixed(2);
+    return r;
+}
+//Ct to Fah
+function CttoFah(value) {
+    r = ((value * 9 / 5) + 32).toFixed(1)
+    return r;
+}
