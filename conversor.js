@@ -5,6 +5,26 @@ function inputConverter(num) {
 
 let resultConv = document.getElementById("resultConversor");
 
+function convert(opc) {
+    //let value  = parseInt(resultF.value);
+    let value = Number(resultConv.value + "");
+    let text = "";
+    let r = 0;
+    if (value) {
+        if (opc == 1) { r = FahtoCt(value); text += value + "°F= " + r + "°C"; }  // Fah to Ct
+        else if (opc == 2) { r = CttoFah(value); text += value + "°C = " + r + "°F"; } //Ct to Fah
+        else if (opc == 3) { r = BartoPas(value); text += value + "Bar = " + r + "Pa"; }//Bar to Pas
+        else if (opc == 4) { r = Pastobar(value); text += value + "Pa = " + r + "Bar"; } //Pas to bar
+        else if (opc == 5) { r = KgtoGr(value); text += value + "Kg = " + r + "Gr"; }//Kg to Gr
+        else if (opc == 6) { r = GrtoKg(value); text += value + "Gr = " + r + "Kg"; }//Gr to Kg
+        else if (opc == 7) { r = MttoCm(value); text += value + "Mt = " + r + "Cm"; }//Mt to Cm
+        else if (opc == 8) { r = CmtoMt(value); text += value + "Cm = " + r + "Mt"; } //Cm to Mt
+        resultConv.value = text;
+    } else {
+        alert("Erro! Adicione valores válidos.")
+    }
+}
+
 
 //Fah to Ct
 function FahtoCt(value) {
@@ -45,4 +65,15 @@ function MttoCm(value) {
 function CmtoMt(value) {
     r = (value / 100).toFixed(4);
     return r;
+}
+
+// Reset button
+function resetConverter() {
+    resultConv.value = "";
+}
+
+// Del button
+function delConverter() {
+    let result2 = resultConv.value;
+    resultConv.value = result2.substring(0, result2.length - 1);
 }
