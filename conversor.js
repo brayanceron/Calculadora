@@ -6,11 +6,10 @@ function inputConverter(num) {
 let resultConv = document.getElementById("resultConversor");
 
 function convert(opc) {
-    //let value  = parseInt(resultF.value);
-    let value = Number(resultConv.value + "");
+    let value = Number(resultConv.value);
     let text = "";
     let r = 0;
-    if (value) {
+    if (value || value==0) {
         if (opc == 1) { r = FahtoCt(value); text += value + "°F= " + r + "°C"; }  // Fah to Ct
         else if (opc == 2) { r = CttoFah(value); text += value + "°C = " + r + "°F"; } //Ct to Fah
         else if (opc == 3) { r = BartoPas(value); text += value + "Bar = " + r + "Pa"; }//Bar to Pas
